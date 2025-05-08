@@ -60,3 +60,29 @@ class Solution {
         
     }
 }
+
+
+
+int i ;
+int j =-1;
+int k = 0 ;
+int temp;
+while(i<arr.length-1 && j<k ){
+    if(arr[i]==0){
+        j=i;
+        k = i+1;
+    }
+    if(arr[k] != 0 && j != -1){
+        temp = arr[j];
+        arr[j] = arr[k];
+        arr[k]= temp;
+        j=-1;
+        k++
+    }
+    else{
+        i++;
+        k++;
+    }
+
+
+}
