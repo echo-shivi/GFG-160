@@ -1,1 +1,14 @@
-
+int n= arr.length;
+d=d%n;
+int i =0;
+int temp,j;
+while(i<d){
+    j = n-1;
+    while(j>=d){
+    temp = arr[i];
+    arr[i]=arr[j];
+    arr[j]=temp;
+    j--;
+    }
+    i++;
+}
