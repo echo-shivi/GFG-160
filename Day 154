@@ -1,0 +1,48 @@
+//bruteforce
+ArrayList ar = new ArrayList<>();
+int temp;
+int n = arr.length;
+ar.add(arr[0]);
+while(i<n && j < n){
+    if(arr[i]<0 && arr[j]<0 ){
+       int a = Math.abs(arr[i]);
+        int b = Math.abs(arr[j]);
+        a<b?i++:j++;
+
+        ar.add(temp);
+    }
+}
+//try
+ArrayList ar = new ArrayList<>();
+int temp ;
+int n = arr.length;
+int i =0 ;
+ar.add(arr[i]);
+int j =i+1;
+while(i<n && j<n){
+    temp = ar[i]*arr[j];
+    if(temp < ar[i-1]){
+        i++;
+        while(i<=j){
+        temp *= arr[i];
+        ar.add(temp);
+    }
+    }
+    if(temp == 0){
+        //return ar[i-1];
+        break;
+    }
+    else{
+        ar.add(temp);
+        j++;
+    }
+}
+int max= Integer.Min;
+for(int i=0;i<ar.length;i++){
+    if(ar[i]>max){
+        max= ar[i];
+    }
+}
+return max;
+
+
